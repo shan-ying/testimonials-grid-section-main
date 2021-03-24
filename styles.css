@@ -1,0 +1,135 @@
+:root{
+  /* Color */
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-m: hsl(0, 0%, 70%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Font */
+  --fontsize: 13px;
+  --fontsize-large: 20px;
+  --bold-font-weight: 600;
+  --normal-font-weight: 500;
+
+  /* Screen Size */
+  --max-width: 1100px;
+  --mobile: 375px;
+
+  --gap: 25px;
+  --gap-small: 15px;
+
+}
+body{
+  background-color: var(--light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 5% auto 5% auto;
+}
+
+.cards{
+  padding: 25px;
+  font-size: var(--fontsize);
+  color: var(--light-gray-m);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: var(--max-width);
+  gap: var(--gap);
+}
+
+.card{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: var(--gap);
+}
+
+.card_colums2{
+  grid-column: span 2;
+}
+
+.card_row2{
+  grid-row: span 2;
+}
+
+.violet_card{
+  background-color: var(--violet);
+}
+
+.dark-grayish-blue_card{
+  background-color: var(--dark-grayish-blue);
+}
+
+.white_card{
+  background-color: var(--white);
+}
+
+.dark-blackish-blue-card{
+  background-color: var(--dark-blackish-blue);
+}
+
+.writer{
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 var(--gap-small);
+}
+
+.writer_name{
+  font-weight: var(--bold-font-weight);
+}
+
+.writer_school{
+  font-weight: var(--normal-font-weight);
+}
+.person_img{
+  height: 25px;
+  border-radius: 50%;
+  border:3px solid black;
+  grid-row: span 2;
+}
+
+.card_title{
+  font-size: var(--fontsize-large);
+  font-weight: var(--bold-font-weight);
+}
+
+.card_light{
+  color: var(--dark-blackish-blue);
+}
+
+.card_dark{
+  color: var(--white);
+}
+.attribution{
+  margin: 30px;
+}
+
+@media screen and (max-width: 875px) {
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cards{
+    grid-template-columns: auto;
+  }
+  .card_colums2{
+    grid-column: auto;
+  }
+  .card_row2{
+    grid-row: auto;
+  }
+}
